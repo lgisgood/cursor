@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "网页图片提取器",
+  "version": "1.0",
+  "description": "提取当前网页中的所有图片",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+} 
