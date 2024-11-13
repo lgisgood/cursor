@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 400px;
+      padding: 10px;
+    }
+    button {
+      margin: 5px;
+      padding: 5px 10px;
+    }
+    #status {
+      margin-top: 10px;
+      color: #666;
+    }
+    #imageGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .image-container {
+      position: relative;
+      border: 1px solid #ddd;
+      padding: 5px;
+    }
+    .image-container img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+    }
+    .image-container input[type="checkbox"] {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+    }
+    .download-single {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      background: rgba(255, 255, 255, 0.8);
+      border: none;
+      cursor: pointer;
+      padding: 2px 5px;
+    }
+    .select-all-container {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+    .select-all-container label {
+      margin-left: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="extractButton">提取图片</button>
+  <button id="downloadSelected" disabled>下载选中图片</button>
+  <div class="select-all-container">
+    <input type="checkbox" id="selectAll">
+    <label for="selectAll">全选</label>
+  </div>
+  <div id="status"></div>
+  <div id="imageGrid"></div>
+  <script src="popup.js"></script>
+</body>
+</html> 
